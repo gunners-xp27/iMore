@@ -1,5 +1,5 @@
 const firebase = require('../firebase');
-//const stringify = require('csv.stringify');
+const stringify = require('csv-stringify');
 
 const create = ({ name }) => {
     const leads = firebase.database().ref('leads');
@@ -15,10 +15,9 @@ const csv = (cb) => {
             const { name } = lead.val();
             data.push([lead.key, name]);
         });
-        // stringify(data, (err, output) => {
-        //     cb(output);
-        // });
-        cb(data);
+        stringify(data, (err, output) => {
+            cb(output);
+        });
     });
 };
 
