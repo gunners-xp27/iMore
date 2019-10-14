@@ -6,6 +6,139 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>iMore - Home</title>
+    <style>
+        body{
+            overflow-x:hidden;
+            margin: 0px;
+            font-family: sans-serif;
+        }
+        header{
+            padding: 0% 3% 0% 3%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        header img{
+            width: 8%;
+        }
+        section div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        ul,li a, footer a,nav{
+            text-decoration-line: none;
+            list-style-type: none;
+            display: flex;
+            color: black;
+            
+        }
+        li{
+            margin: 0% 3%;
+        }
+        footer{
+            background: #C4C4C4;
+            height: 80px;
+            position: static;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            bottom: 0px;
+            width: 100%;
+            
+        }
+        .baixe_agora{
+            position: absolute;
+            bottom: 10%;
+            left: 10%;
+            margin: 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+        .baixe_agora h3{
+            color: orange;
+        }
+        .baixe_agora a{
+            text-decoration: none;
+            color: white;
+            background: aqua;
+            width: 110px;
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 30px;
+            font-weight: bold;
+
+        }
+        #padding{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0% 5% 0% 3%; 
+            width: 100%;
+        }
+        .rodape img{
+            margin: 4px;
+        }
+        h6, h3, .baixe_agora p{
+            margin: 0%;
+        }
+        footer a {
+            text-decoration: none;
+            color: white;
+            background: aqua;
+            font-weight: bolder;
+            border-radius: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            
+        }
+        .cima{
+            display: flex;
+        }
+        .centro{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .centro div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .alinhado{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0% 5% 0% 3%; 
+            margin: 6px 0px 6px 0px;
+        }
+        #conteudo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .alinhado div{
+            margin: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .alinhado img{
+            width: 40%;
+        }
+        #topo{
+            padding: 50px;
+        }
+        </style>
+
 </head>
 <body>
     <header>
@@ -18,16 +151,18 @@
             </ul>
         </nav>
     </header>
-    <section>
-        <img src= "img/Group6.png" alt="Celulares">        
+    <section id="topo">
+        <div>
+            <img src= "img/Group6.png" alt="Celulares">   
+        </div>     
         <div class="baixe_agora">
-                <h3>Ebook exclusivo</h3>
+            <h3>Ebook exclusivo</h3>
             <p>Saiba oque seu cliente quer e não <br> te conta.</p>
             <a href="ebook.html">Baixe Agora</a>
         </div>        
     </section>
-    <section>
-        <div class="esquerda">
+    <div id="conteudo">
+        <div class="alinhado">
             <img src="./img/Rectangle 19.png" alt="Computador">
             <div>
                 <h5>Teste</h5>
@@ -38,8 +173,7 @@
                 porro doloremque rerum nesciunt?</p>
             </div>
         </div>
-        <div class="direita">
-            <img src="./img/Rectangle 20.png" alt="Palestra">
+        <div class="alinhado">
             <div>
                 <h5>Teste</h5>
                 <h6 class="data"></h6>
@@ -48,6 +182,7 @@
                 Hic tempora consectetur eaque maiores odit molestias aperiam cupiditate, <br>
                 porro doloremque rerum nesciunt?</p>
             </div>
+            <img src="./img/Rectangle 20.png" alt="Palestra">
         </div>
         <div class="centro">
             <img src="./img/Rectangle 21.png" alt="Sala">
@@ -60,7 +195,7 @@
                 porro doloremque rerum nesciunt?</p>
             </div>
         </div>
-        <div class="esquerda">
+        <div class="alinhado">
             <img src="/img/Rectangle 22.png" alt="Ensinando">
             <div>
                 <h5>Teste</h5>
@@ -71,8 +206,7 @@
                 porro doloremque rerum nesciunt?</p>
             </div>   
          </div>
-        <div class="direita">
-            <img src="./img/Rectangle 23.png" alt="Demonstração">
+        <div class="alinhado">
             <div>
                 <h5>Teste</h5>
                 <h6 class="data"></h6>
@@ -81,18 +215,21 @@
                 Hic tempora consectetur eaque maiores odit molestias aperiam cupiditate, <br>
                 porro doloremque rerum nesciunt?</p>
             </div>
+            <img src="./img/Rectangle 23.png" alt="Demonstração">
         </div>
-    </section>
+    </div>
     <footer>
-        <div class="rodape">
-            <img src="./img/Vector-1.png" alt="Instagram">
-            <img src="./img/Vector-2.png" alt="Linkedin">
-            <img src="./img/Vector.png" alt="Facebook">
-        </div>
-        <div>
-            <h6>Receba conteudo exclusivo <br>diretono seu email </h6>
-            <a href="Newsletter.html"></a>
-        </div>
+        <div id="padding">
+            <div class="rodape">
+                <img src="./img/Vector-1.png" alt="Instagram">
+                <img src="./img/Vector-2.png" alt="Linkedin">
+                <img src="./img/Vector.png" alt="Facebook">
+            </div>
+            <div>
+                <h6>Receba conteudo exclusivo <br>diretono seu email </h6>
+                <a href="Newsletter.html">Newsletter</a>
+            </div>
+        </div>    
     </footer>
 
 </body>
