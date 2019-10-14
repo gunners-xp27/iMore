@@ -14,7 +14,11 @@ app.get('/', (req, res) => {
 
 app.post('/leads', (req, res) => {
     const { name } = req.body;
-    const lead = Lead.create({ name });
+    const { empresa } = req.body;
+    const { cargo } = req.body;
+    const { email } = req.body;
+    const { ajuda } = req.body;
+    const lead = Lead.create({ name, empresa, cargo, email, ajuda });
     res.send('Obrigado, ' + name + "!");
 });
 

@@ -23,19 +23,18 @@
             <h4> Fique por dentro de <br>todos os nossos <br>novos conteudos</h4>
         </div>
         <div id="direita">
-            <form action="post">
+            <form action="/leads" method="POST">
                 <h5>Nome Completo</h5>
-                <input type="text" name="nome" id="nome" placeholder="Nome Completo">
+                <input type="text" name="name" id="name" placeholder="Nome Completo">
                 <h5>Empresa</h5>
-                <input type="text" name="nome" id="nome" placeholder="Empresa">
+                <input type="text" name="empresa" id="empresa" placeholder="Empresa">
                 <h5>Cargo</h5>
                 <input type="text" name="cargo" id="cargo" placeholder="Cargo">
                 <h5>Email</h5>
                 <input type="email" name="email" id="email" placeholder="Email">
                 <h5>Como possso te ajudar?</h5>
                 <input type="text" name="ajuda" id="ajuda" placeholder="Opcional">
-
-                <button><input type="submit" value="cadastro">Inscreva-se</button>
+                <button type="submit" value="cadastro">Inscreva-se</button>
             </form>
         </div>        
     </section>
