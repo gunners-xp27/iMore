@@ -12,6 +12,37 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
+app.get('/blog', (req, res) => {
+    res.sendFile(__dirname + '/blog.html');
+});
+ 
+app.get('/Newsletter', (req, res) => {
+    res.sendFile(__dirname + '/Newsletter.html');
+});
+ 
+app.get('/Ebook', (req, res) => {
+    res.sendFile(__dirname + '/ebook.html');
+});
+app.get('/home', (req, res) => {
+    res.sendFile(__dirname + '/index.html');
+});
+ 
+app.get('/ebook.html', (req, res) => {
+    res.sendFile(__dirname + '/ebook.html');
+});
+ 
+app.get('/Newsletter.html', (req, res) => {
+    res.sendFile(__dirname + '/Newsletter.html');
+});
+ 
+app.get('/blog.html', (req, res) => {
+    res.sendFile(__dirname + '/blog.html');
+});
+ 
+app.get('/index.html', (req, res) => {
+    res.sendFile(__dirname + '/index.html');
+});
+
 app.post('/leads', (req, res) => {
     const { name } = req.body;
     const { empresa } = req.body;
