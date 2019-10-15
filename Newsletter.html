@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
     <title>iMore-Newsletter</title>
     <style>
         body{
@@ -106,13 +105,13 @@
         <div id="direita">
             <form action="/leads" method="POST">
                 <h5>Nome Completo</h5>
-                <input type="text" name="name" id="name" placeholder="Nome Completo">
+                <input type="text" name="name" id="name" placeholder="Nome Completo" required>
                 <h5>Empresa</h5>
-                <input type="text" name="empresa" id="empresa" placeholder="Empresa">
+                <input type="text" name="empresa" id="empresa" placeholder="Empresa" required>
                 <h5>Cargo</h5>
-                <input type="text" name="cargo" id="cargo" placeholder="Cargo">
+                <input type="text" name="cargo" id="cargo" placeholder="Cargo" required>
                 <h5>Email</h5>
-                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="email" name="email" id="email" placeholder="Email" required>
                 <h5>Como possso te ajudar?</h5>
                 <input type="text" name="ajuda" id="ajuda" placeholder="Opcional">
                 <input type="submit" value="Baixe Agora" id="botao">
