@@ -15,6 +15,10 @@ app.get('/', (req, res) => {
 app.get('/blog', (req, res) => {
     res.sendFile(__dirname + '/blog.html');
 });
+
+app.get('/blog-2', (req, res) => {
+    res.sendFile(__dirname + '/blog-2.html');
+});
  
 app.get('/Newsletter', (req, res) => {
     res.sendFile(__dirname + '/Newsletter.html');
@@ -37,6 +41,10 @@ app.get('/Newsletter.html', (req, res) => {
  
 app.get('/blog.html', (req, res) => {
     res.sendFile(__dirname + '/blog.html');
+});
+
+app.get('/blog-2.html', (req, res) => {
+    res.sendFile(__dirname + '/blog-2.html');
 });
  
 app.get('/index.html', (req, res) => {
