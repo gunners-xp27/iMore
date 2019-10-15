@@ -198,5 +198,29 @@
             </div>
         </div>    
     </footer>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyA6Ei_iQsY8k9A20bBukWzbNR5SxDtM4B0",
+            authDomain: "gunners-imore.firebaseapp.com",
+            databaseURL: "https://gunners-imore.firebaseio.com",
+            projectId: "gunners-imore",
+            storageBucket: "gunners-imore.appspot.com",
+            messagingSenderId: "244180259618",
+            appId: "1:244180259618:web:fcf92677f0b4260ad58b7b",
+            measurementId: "G-8DYBG5C6J7"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
 </body>
 </html>
