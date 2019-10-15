@@ -6,10 +6,91 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>iMore-Newsletter</title>
+    <style>
+        body{
+            overflow-x:hidden;
+            margin: 0px;
+            font-family: sans-serif;
+        }
+        header{
+            padding: 0% 16% 0% 3%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        ul,li a, footer a,nav{
+            text-decoration-line: none;
+            list-style-type: none;
+            display: flex;
+            color: black;
+            
+        }
+        li{
+            margin: 0% 3%;
+        }
+        section{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        footer{
+            background: #C4C4C4;
+            height: 80px;
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            bottom: 0px;
+            width: 100%;
+        }
+        #padding{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0% 5% 0% 3%; 
+            width: 100%;
+        }
+        .rodape img{
+            margin: 4px;
+        }
+        #coluna p, a{
+            text-align: center;
+            text-decoration: none;
+            color: black;
+        }
+        footer a {
+            text-decoration: none;
+            color: white;
+            background: aqua;
+            font-weight: bolder;
+            border-radius: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+        }
+        h6{
+            margin: 0%;
+        }
+        input, h5{
+            margin: 2%;
+        }
+        input{
+            border: solid aqua 3px;
+        }
+        #botao{
+            border-radius: 10px;
+            background: aqua;
+            color: white;
+            font-weight: bold;
+        }
+</style>
 </head>
 <body>
     <header>
-        <img src="" alt="">
+        <img id="logo"  src="./img/logo.png" alt="iMore" width="100" height="50">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -17,7 +98,7 @@
                 <li><a href="Newsletter.html">Newsletter</a></li>
             </ul>
         </nav>
-    </header>
+    </header>  
     <section>
         <div id="esquerda">
             <h3> Ebook exclusivo</h3>
@@ -27,30 +108,34 @@
                 porro doloremque rerum nesciunt?</p>
         </div>
         <div id="direita">
-            <form action="post">
+            <form action="/leads" method="POST">
                 <h5>Nome Completo</h5>
-                <input type="text" name="nome" id="nome" placeholder="Nome Completo">
+                <input type="text" name="name" id="name" placeholder="Nome Completo">
                 <h5>Empresa</h5>
-                <input type="text" name="nome" id="nome" placeholder="Empresa">
+                <input type="text" name="empresa" id="empresa" placeholder="Empresa">
                 <h5>Cargo</h5>
                 <input type="text" name="cargo" id="cargo" placeholder="Cargo">
                 <h5>Email</h5>
                 <input type="email" name="email" id="email" placeholder="Email">
-                <button><input type="submit" value="cadastro">Baixe Agora</button>
+                <h5>Como possso te ajudar?</h5>
+                <input type="text" name="ajuda" id="ajuda" placeholder="Opcional">
+                <input type="submit" value="Baixe Agora" id="botao">
             </form>
         </div>        
     </section>
     
     <footer>
-        <div class="rodape">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-        </div>
-        <div>
-            <h6>Receba conteudo exclusivo <br>diretono seu email </h6>
-            <a href=""></a>
-        </div>
+        <div id="padding">
+            <div class="rodape">
+                <img src="./img/Vector-1.png" alt="Instagram">
+                <img src="./img/Vector-2.png" alt="Linkedin">
+                <img src="./img/Vector.png" alt="Facebook">
+            </div>
+            <div>
+                <h6>Receba conteudo exclusivo <br>diretono seu email </h6>
+                <a href="Newsletter.html">Newsletter</a>
+            </div>
+        </div>    
     </footer>
 </body>
 </html>
