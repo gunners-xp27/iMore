@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>iMore - Home</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <style>
         body{
             overflow-x:hidden;
@@ -134,8 +137,27 @@
         #topo{
             padding: 50px;
         }
-        </style>
-
+        input, h5{
+            margin: 2%;
+        }
+        input{
+            border: solid aqua 2px;
+            border-radius: 4px;
+            padding: 4px 10px;
+            width: 90%;
+        }
+        .botao{
+            border-radius: 10px;
+            background: aqua;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 5px 15px;
+        }
+        .botao:hover{
+            background-color: #00adff;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -163,7 +185,7 @@
         <div class="alinhado">
             <img src="./img/Rectangle 19.png" alt="Computador" style="padding: 10px;">
             <div>
-                <a href="blog.html"><h5>COMO A TECNOLOGIA PODE AJUDAR EM SUAS VENDAS?</h5></a>
+                <a href="#ex1" rel="modal:open"><h5>COMO A TECNOLOGIA PODE AJUDAR EM SUAS VENDAS?</h5></a>
                 <h6 class="data"></h6>
                 <p>Hoje a empresa que não investe em tecnologias para otimização dos <br>
                     seus processos, está perdendo tempo e dinheiro. A tecnologia <br>
@@ -172,7 +194,7 @@
         </div>
         <div class="alinhado">
             <div>
-                <a href="blog-2.html"><h5>VOCÊ SABE O QUE SÃO MOMENTOS DA VERDADE <br>
+                <a href="#ex2" rel="modal:open"><h5>VOCÊ SABE O QUE SÃO MOMENTOS DA VERDADE <br>
                     E POR QUE SÃO TÃO IMPORTANTES PARA UMA EMPRESA? </h5></a>
                 <h6 class="data"></h6>
                 <p>Se você for a um banheiro de um restaurante e ele estiver sujo, <br>
@@ -182,41 +204,6 @@
             <img src="./img/Rectangle 20.png" alt="Palestra" style="padding: 10px;">
         </div>
         <br>
-        <!-- 
-        <div class="centro">
-            <img src="./img/Rectangle 21.png" alt="Sala">
-            <div>
-                <h5>Teste</h5>
-                <h6 class="data"></h6>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-                Vitae commodi modi accusamus libero iste velit exercitationem fugiat. <br>
-                Hic tempora consectetur eaque maiores odit molestias aperiam cupiditate, <br>
-                porro doloremque rerum nesciunt?</p>
-            </div>
-        </div>
-        <div class="alinhado">
-            <img src="/img/Rectangle 22.png" alt="Ensinando">
-            <div>
-                <h5>Teste</h5>
-                <h6 class="data"></h6>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-                Vitae commodi modi accusamus libero iste velit exercitationem fugiat. <br>
-                Hic tempora consectetur eaque maiores odit molestias aperiam cupiditate, <br>
-                porro doloremque rerum nesciunt?</p>
-            </div>   
-         </div>
-        <div class="alinhado">
-            <div>
-                <h5>Teste</h5>
-                <h6 class="data"></h6>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-                Vitae commodi modi accusamus libero iste velit exercitationem fugiat. <br>
-                Hic tempora consectetur eaque maiores odit molestias aperiam cupiditate, <br>
-                porro doloremque rerum nesciunt?</p>
-            </div>
-            <img src="./img/Rectangle 23.png" alt="Demonstração">
-        </div>
-         -->
     </div>
     <footer>
         <div id="padding">
@@ -231,6 +218,60 @@
             </div>
         </div>    
     </footer>
+
+    <div id="ex1" class="modal" style="text-align: center; max-width: 300px;">
+        <form id="formEx1" action="/leads" method="POST">
+            <h5>Nome Completo</h5>
+            <input type="text" name="name" placeholder="Nome Completo" required>
+            <h5>Empresa</h5>
+            <input type="text" name="empresa" placeholder="Empresa" required>
+            <h5>Cargo</h5>
+            <input type="text" name="cargo" placeholder="Cargo" required>
+            <h5>Email</h5>
+            <input type="email" name="email" placeholder="Email" required>
+            <h5>Como possso te ajudar?</h5>
+            <input type="text" name="ajuda" placeholder="Opcional">
+            <br>
+            <br>
+            <input type="submit" value="Visualizar o conteúdo" class="botao">
+        </form>
+    </div>
+
+    <div id="ex2" class="modal" style="text-align: center; max-width: 300px;">
+        <form id="formEx2" action="/leads" method="POST">
+            <h5>Nome Completo</h5>
+            <input type="text" name="name" placeholder="Nome Completo" required>
+            <h5>Empresa</h5>
+            <input type="text" name="empresa" placeholder="Empresa" required>
+            <h5>Cargo</h5>
+            <input type="text" name="cargo" placeholder="Cargo" required>
+            <h5>Email</h5>
+            <input type="email" name="email" placeholder="Email" required>
+            <h5>Como possso te ajudar?</h5>
+            <input type="text" name="ajuda" placeholder="Opcional">
+            <br>
+            <br>
+            <input type="submit" value="Visualizar o conteúdo" class="botao">
+        </form>
+    </div>
+
+    <script>
+        $("#formEx1").on("submit", function(e) {
+            e.preventDefault(); // cancel submission
+            $.post("/leads", $("#formEx1").serialize(), function(data) {
+                alert(data);
+                window.location.replace("blog.html");
+            });
+        });
+        
+        $("#formEx2").on("submit", function(e) {
+            e.preventDefault(); // cancel submission
+            $.post("/leads", $("#formEx2").serialize(), function(data) {
+                alert(data);
+                window.location.replace("blog-2.html");
+            });
+        });
+    </script>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
