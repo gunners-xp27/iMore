@@ -18,93 +18,125 @@
         header{
             padding: 0% 16% 0% 3%;
             display: flex;
+            width: 100%;
             flex-direction: row;
+            align-items: center;
             justify-content: space-between;
+            background: #052026;
+            margin: 0% 5% 0% 0%;
+            
         }
         ul,li a, footer a,nav{
             text-decoration-line: none;
             list-style-type: none;
             display: flex;
-            color: black;
-            
+            color: #F29E38;
+            margin: 0px 20px 0px 0px;
+            font-size: 15px;
         }
-        li{
-            margin: 0% 3%;
+        input, h5{
+            margin: 2%;
         }
-        #centro{
-            text-align: justify;
-            flex-direction: column;
-            align-items: center;
+        input{
+            border: solid aqua 2px;
+            border-radius: 4px;
+            padding: 4px 10px;
+            width: 90%;
         }
-        section{
-            display: flex;
-            flex-direction: row;
-        }
-        #img{
-            padding: 50px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        #coluna{
-            width: 20%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            
-        }
-        #centro{
-            padding: 50px;
-            width: 80%;
-        }
-        footer{
-            background: #C4C4C4;
-            height: 80px;
-            position: static;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            bottom: 0px;
-            width: 100%;
-        }
-        #padding{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0% 5% 0% 3%; 
-            width: 100%;
-        }
-        .rodape img{
-            margin: 4px;
-        }
-        #coluna p, a{
-            text-align: center;
-            text-decoration: none;
-            color: black;
-        }
-        h6{
-            margin: 0%;
-        }
-        footer a {
-            text-decoration: none;
-            color: white;
+        .botao{
+            border-radius: 10px;
             background: aqua;
-            font-weight: bolder;
-            border-radius: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 30px;
-        }
-        #coluna img{
-            width: 50%;
-        }
-        .mais_vistos{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+            color: white;
+            font-weight: bold;
+       }
+       .conteudo{
+           background: #F29E38;
+           margin: 5px 0%;
+           width: 100%;
+           display: flex;
+           align-items: center;
+           align-content: center;
+           flex-direction: column;
+           text-align: center;
+       }
+       .conteudo input{
+           width: 20%;
+           background: #333333;
+           color: white;
+           border: #333333 solid;
+           border-radius: 25px;
+       }
+       a{
+           color: black;
+           font-size: 20px;
+       }
+       #padding{
+           display: flex;
+           flex-direction: row;
+           justify-content: space-around;
+           align-items: center;
+           background: #052026;
+       }
+       .rodape{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+       }
+       .rodape img{
+           margin: 5px;
+       }
+       .form{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           color: white;
+       }
+       .cadastro input{
+           border-radius: 25px;
+           border: #052026 solid;
+       }
+       .cadastro{
+           background: #F29E38;
+           width: 40%;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           color: white;
+           margin: 5px;
+           border-radius: 25px;
+           
+       }
+       #enviar{
+           width: 30%;
+           background: #052026;
+           color: white;
+           border-radius: 25px;
+           border: #052026;
+           left: 0px;
+       }
+       .meio{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+       }
+       #centro{
+           width: 90%;
+           text-align: justify;          
+       }
+       #alinhado{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+       }
+       #img{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           width: 90%;
+       }
+       .meio input{
+           width: 80%;
+       }
         
     </style>
 </head>
@@ -120,9 +152,9 @@
         </nav>
     </header>    
     <div id="img">
-        <img src="./img/Rectangle 26-2.png" alt="Sala">
+        <img src="img/conteudo1.png" alt="Sala">
     </div>
-    <section>
+    <section id="alinhado">
         <div id="centro">
             <h3>
                 O QUE O SEU CLIENTE QUER VER EM UMA PROPOSTA COMERCIAL?
@@ -131,6 +163,11 @@
             <p style="text-indent: 40px;">Em uma apresentação, onde se fala da sua empresa em termos de negócios com o intuito de vender uma proposta, é preciso ter uma base muito bem organizada, sólida e atraente, necessitando de um estudo sobre cada formato de apresentação e o que encaixa melhor para o seu cliente.</p>
             <p style="text-indent: 40px;">Mas antes de falar da estrutura em si, um ponto importante: antes do contato inicial com os clientes, é preciso saber bem quem são essas pessoas e o que podemos fazer por eles, sendo assim começamos por três perguntas básicas: Quem? O que? e Por quê ? Tendo em mente que uma apresentação consistente e de valor é crucial para a conquista de clientes e consequentemente para o sucesso da sua empresa, é imprescindível saber BEM as respostas dessas três perguntinhas. Entrando à fundo, podemos complementar nos perguntando: Com quem estou falando? O que eles buscam? Por que precisam do que estou vendendo?</p>
             <p style="text-indent: 40px;">A partir do estudo de público-alvo e da escolha de apresentação, podemos dividir o conteúdo da apresentação em 3 partes:</p>
+            <div class="conteudo">
+                    <h4>Saiba Captar Leads <br> Qualificados</h4>
+                    <p>Aprenda a maneira mais eficiente <br> para captar seus leads e expandir suas vendas.</p>
+                    <input type="button" value="Baixar">
+            </div>
             <p style="margin-left: 50px; text-indent: -10px;">-	Quem você é: conte um pouco de como a sua empresa surgiu e qual o seu propósito.</p>
             <p style="margin-left: 50px; text-indent: -10px;">-	O que você faz: quais serviços presta e quais soluções a sua empresa é capaz de dar aos futuros clientes. Mostre no que você é especialista e o que te diferencia das demais empresas. Algumas perguntas podem te ajudar a explicar melhor quais as singularidades do seu negócio por exemplo: Você possui ferramentas ou serviços próprios, onde em nenhum outro local podem ser achadas? Você tem uma equipe completa que ofereça ao cliente uma experiência única e que o ajudem a obter um resultado de sucesso rápido? </p>
             <p style="margin-left: 50px; text-indent: -10px;">-	Além disso, descreva experiências relevantes da sua equipe, objetivos alcançados em outros projetos e melhor ainda, compartilhe depoimentos de clientes atuais e antigos elogiando o seu trabalho. Destaque pontos importantes que mostrem o porque que obviamente devem te contratar.</p>
@@ -142,56 +179,32 @@
             <br>
             <p style="text-indent: 40px;">Depois de vistas as questões de conteúdo da sua apresentação, foque na parte técnica como uma fonte legível, tempo de apresentação (não pode nem ser longa e nem muito curta), certifique-se do texto ter coesão (início, meio e fim), seja claro e objetivo.</p>
             <p style="text-indent: 40px;">Após todas essas dicas de conteúdo, técnicas e de conhecimento sobre com quem e pra quem você vai vender, só o que resta é partir para a próxima reunião! Boas vendas!</p>
-        </div>
-        <div id="coluna">
-            <h3>Mais Vistos</h3>
-            <div class= mais_vistos>
-                <a href="tecnologia-e-marketing-digital">
-                    <img src="/img/Rectangle 19.png" alt="Ensinando">
-                    <a href="tecnologia-e-marketing-digital">
-                        <h6>COMO A TECNOLOGIA PODE AJUDAR EM SUAS VENDAS?</h6>
-                    </a>
-                    <p>Hoje a empresa que não investe em tecnologias para otimização dos <br>
-                        seus processos, está perdendo tempo e dinheiro. A tecnologia...
-                    </p>
-                </a>
-            </div>
-            <br>
-            <div class= mais_vistos>
-                <a href="momentos-da-verdade-para-sua-empresa">
-                    <img src="./img/Rectangle 20.png" alt="Computador">
-                    <a href="momentos-da-verdade-para-sua-empresa">
-                        <h6>VOCÊ SABE O QUE SÃO MOMENTOS DA VERDADE E POR QUE SÃO TÃO IMPORTANTES PARA UMA EMPRESA?</h6>
-                    </a>
-                    <p>Se você for a um banheiro de um restaurante e ele estiver sujo, <br>
-                        você vai acreditar que todo o ambiente é daquele jeito...
-                    </p>
-                </a>
-            </div>
-            <br>
-            <div class= mais_vistos>
-                <a href="estrutura-proposta-comercial">
-                    <img src="./img/Rectangle 26-2.png" alt="Cliente">
-                    <a href="estrutura-proposta-comercial">
-                        <h6>O QUE O SEU CLIENTE QUER VER EM UMA PROPOSTA COMERCIAL?</h6>
-                    </a>
-                    <p>A partir do conteúdo a seguir, iremos nortear sua empresa <br>
-                        à como estruturar um modelo de proposta comercial com o...
-                    </p>
-                </a>
-            </div>
         </div>  
     </section>
+    <section class="meio">
+        <div class="cadastro">
+                <h3>Cadastrase na nossa Mailling</h3>
+            <form action="/Lead.js" method="post">
+                <input type="Nome" name="nome" id="nome" placeholder="Nome Completo">
+                <input type="text" name="empresa" id="empresa" placeholder="Empresa">
+                <input type="text" name="cargo" id="cargo" placeholder="Cargo">
+                <input type="email" name="email" id="email">
+            </form>
+            <input type="submit" value="Enviar" id="enviar">
+        </div>
+    </section>
     <footer>
-        <div id="padding">
+        <div id="padding">        
             <div class="rodape">
                 <img src="./img/Vector-1.png" alt="Instagram">
                 <img src="./img/Vector-2.png" alt="Linkedin">
                 <img src="./img/Vector.png" alt="Facebook">
             </div>
-            <div>
+            <div class="form">
                 <h6>Receba conteudo exclusivo <br>direto no seu email </h6>
-                <a href="Newsletter.html" style="margin-top: 5px;">Newsletter</a>
+                <input type="email" name="email" value="email" width="30%" placeholder="Email">
+                <input type="nome" name="nome" value="nome" width="30%" placeholder="Nome">
+                <a href="Newsletter.html" style="margin-top: 5px;">Enviar</a>
             </div>
         </div>    
     </footer>

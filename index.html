@@ -17,125 +17,21 @@
         header{
             padding: 0% 16% 0% 3%;
             display: flex;
+            width: 100%;
             flex-direction: row;
-            justify-content: space-between;
-        }
-        section div{
-            display: flex;
-            flex-direction: column;
             align-items: center;
+            justify-content: space-between;
+            background: #052026;
+            margin: 0% 5% 0% 0%;
+            
         }
         ul,li a, footer a,nav{
             text-decoration-line: none;
             list-style-type: none;
             display: flex;
-            color: black;
-            
-        }
-        li{
-            margin: 0% 3%;
-        }
-        footer{
-            background: #C4C4C4;
-            height: 80px;
-            position: static;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            bottom: 0px;
-            width: 100%;
-            
-        }
-        .baixe_agora{
-            position: absolute;
-            bottom: 10%;
-            left: 10%;
-            margin: 5%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: white;
-        }
-        .baixe_agora h3{
-            color: orange;
-        }
-        .baixe_agora a{
-            text-decoration: none;
-            color: white;
-            background: aqua;
-            width: 130px;
-            height: 50px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border-radius: 30px;
-            font-weight: bold;
-        }
-        .baixe_agora a:hover{
-            background-color: #00adff;
-        }
-        #padding{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0% 5% 0% 3%; 
-            width: 100%;
-        }
-        .rodape img{
-            margin: 4px;
-        }
-        h6, h3, .baixe_agora p{
-            margin: 0%;
-        }
-        footer a {
-            text-decoration: none;
-            color: white;
-            background: aqua;
-            font-weight: bolder;
-            border-radius: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 30px;
-        }
-        .cima{
-            display: flex;
-        }
-        .centro{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .centro div{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .alinhado{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            padding: 0% 5% 0% 3%; 
-            margin: 6px 0px 6px 0px;
-        }
-        #conteudo{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .alinhado div{
-            margin: 5px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .alinhado img{
-            width: 40%;
-        }
-        #topo{
-            padding: 50px;
+            color: #F29E38;
+            margin: 0px 20px 0px 0px;
+            font-size: 15px;
         }
         input, h5{
             margin: 2%;
@@ -151,17 +47,78 @@
             background: aqua;
             color: white;
             font-weight: bold;
-            cursor: pointer;
-            padding: 5px 15px;
-        }
-        .botao:hover{
-            background-color: #00adff;
-        }
+       }
+       .unico{
+           width: 80%;
+       }
+       .deitado_imagem{
+           width: 90%;
+       }
+       .lado{
+           display: flex;
+       }
+       .lado div{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           width: 50%;
+           text-align: center;
+       }
+       .deitado{
+           display: flex;
+           align-items: center;
+           flex-direction: column;
+           text-align: center;
+       }
+       .conteudo{
+           background: #F29E38;
+           margin: 5px 0%;
+           width: 100%;
+           display: flex;
+           align-items: center;
+           align-content: center;
+           flex-direction: column;
+           text-align: center;
+       }
+       .conteudo input{
+           width: 20%;
+           background: #333333;
+           color: white;
+           border: #333333 solid;
+           border-radius: 25px;
+       }
+       a{
+           color: black;
+           font-size: 20px;
+       }
+       #padding{
+           display: flex;
+           flex-direction: row;
+           justify-content: space-around;
+           align-items: center;
+           background: #052026;
+       }
+       .rodape{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+       }
+       .rodape img{
+           margin: 5px;
+       }
+       .form{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           color: white;
+       }
+
+
     </style>
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="./img/logo.png" alt="iMore" width="100" height="50"></a>
+        <a href="index.html"><img src="/img/logo.png" alt="iMore" width="100" height="50"></a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -170,66 +127,89 @@
             </ul>
         </nav>
     </header>
-    <section id="topo">
-        <div>
-            <img src= "img/Group6.png" alt="Celulares">   
-        </div>     
-        <div class="baixe_agora">
-            <h3>Ebook exclusivo</h3>
-            <p>Estratégias para usar no momento da negociação <br>
-                e que quase nenhuma Startup usa.</p>
-            <a style="margin-top: 10px;" href="ebook.html">Baixe Agora</a>
-        </div>        
+    <section>
+        <div class="lado">
+                <div>
+                    <img class="unico" src="/img/7.jpg" alt="Homem elaborando proposta">
+                    <a href="estrutura-proposta-comercial.html"><h5>Estrutura proposta comercial</h5></a> 
+                </div>
+                <div>
+                    <img class="unico" src="/img/2.jpg" alt="Empresa">
+                    <a href="momentos-da-verdade-para-sua-empresa.html"><h5>Momento da verdade seu negocio</h5></a>
+                </div>
+        </div>    
+        <div class="deitado">
+                <img class="deitado_imagem" src="/img/imagem.png" alt="Tecnicas de Marketing">
+                <a href="tecnologia-e-marketing-digital.html"><h5>Tecnologia e Marketing Digital</h5></a>        </div>     
     </section>
-    <div id="conteudo">
-        <div class="alinhado">
-            <img src="./img/Rectangle 19.png" alt="Computador" style="padding: 10px;">
-            <div>
-                <a href="#ex1" rel="modal:open"><h5>COMO A TECNOLOGIA PODE AJUDAR EM SUAS VENDAS?</h5></a>
-                <h6 class="data"></h6>
-                <p>Hoje a empresa que não investe em tecnologias para otimização dos <br>
-                    seus processos, está perdendo tempo e dinheiro. A tecnologia <br>
-                    ajuda a melhorar a interação com os clientes aumentando...</p>
-            </div>
-        </div>
-        <div class="alinhado">
-            <div>
-                <a href="#ex2" rel="modal:open"><h5>VOCÊ SABE O QUE SÃO MOMENTOS DA VERDADE <br>
-                    E POR QUE SÃO TÃO IMPORTANTES PARA UMA EMPRESA? </h5></a>
-                <h6 class="data"></h6>
-                <p>Se você for a um banheiro de um restaurante e ele estiver sujo, <br>
-                    você vai acreditar que todo o ambiente é daquele jeito. <br>
-                    Sabe por que isso acontece? Por que o banheiro é...</p>
-            </div>
-            <img src="./img/Rectangle 20.png" alt="Palestra" style="padding: 10px;">
-        </div>
-        <div class="alinhado">
-            <img src="./img/Rectangle 26-2.png" alt="Cliente" style="padding: 10px;">
-            <div>
-                <a href="#ex3" rel="modal:open"><h5>O QUE O SEU CLIENTE QUER VER EM UMA PROPOSTA COMERCIAL?</h5></a>
-                <h6 class="data"></h6>
-                <p>A partir do conteúdo a seguir, iremos nortear sua empresa à como estruturar <br>
-                    um modelo de proposta comercial com o objetivo de encantar seus <br>
-                    potenciais clientes de forma que eles entendam como você pode <br>
-                    solucionar suas dores a fim de que...</p>
-            </div>
-        </div>
-        <br>
+    <div class="conteudo">
+                <h4>Saiba Captar Leads <br> Qualificados</h4>
+                <p>Aprenda a maneira mais eficiente <br> para captar seus leads e expandir suas vendas.</p>
+                <input type="button" value="Baixar">
     </div>
+    <section>
+        <div class="lado">
+                <div>
+                    <img src="/img/4.jpg" class="unico" alt="Homens Correndo">
+                    <a href=""><h5>Saiba Captar Leads e Sair na Frente</h5></a>
+                </div>
+                <div>
+                    <img class="unico" src="/img/Rectangle 26-1.png" alt="Call">
+                    <a href=""><h5>Aprenda a Comunicação com seu Cliente</h5></a>
+                </div>
+        </div>
+        <div class="deitado">
+                    <img class="deitado_imagem" src="/img/conteudo1.png" alt="Homens apertando as mãos">
+                    <a href=""><h5>Saiba Tecnicas de Vendas</h5></a>
+        </div>    
+    </section>
+    <div class="conteudo">
+                <h4>Saiba Captar Leads <br> Qualificados</h4>
+                <p>Aprenda a maneira mais eficiente <br> para captar seus leads e expandir suas vendas.</p>
+                <input type="button" value="Baixar">
+    </div>
+    <section id="barra_img">
+        
+            <div>
+                <img src="" alt="">
+                <h5></h5>
+            </div>
+        </a>
+        <a href="">
+            <div>
+                <img src="" alt="">
+                <h5></h5>
+            </div>
+        </a>
+        <a href="">
+            <div>
+                <img src="" alt="">
+                <h5></h5>
+            </div>
+        </a>
+        <a href="">
+            <div>
+                <img src="" alt="">
+                <h5></h5>
+            </div>
+        </a>    
+    </section>
     <footer>
-        <div id="padding">
+        <div id="padding">        
             <div class="rodape">
                 <img src="./img/Vector-1.png" alt="Instagram">
                 <img src="./img/Vector-2.png" alt="Linkedin">
                 <img src="./img/Vector.png" alt="Facebook">
             </div>
-            <div>
+            <div class="form">
                 <h6>Receba conteudo exclusivo <br>direto no seu email </h6>
-                <a href="Newsletter.html" style="margin-top: 5px;">Newsletter</a>
+                <input type="email" name="email" value="email" width="30%" placeholder="Email">
+                <input type="nome" name="nome" value="nome" width="30%" placeholder="Nome">
+                <a href="Newsletter.html" style="margin-top: 5px;">Enviar</a>
             </div>
         </div>    
     </footer>
-
+    
     <div id="ex1" class="modal" style="text-align: center; max-width: 300px;">
         <form id="formEx1" action="/leads" method="POST">
             <h5>Nome Completo</h5>
@@ -247,7 +227,7 @@
             <input type="submit" value="Visualizar o conteúdo" class="botao">
         </form>
     </div>
-
+    
     <div id="ex2" class="modal" style="text-align: center; max-width: 300px;">
         <form id="formEx2" action="/leads" method="POST">
             <h5>Nome Completo</h5>
@@ -265,7 +245,7 @@
             <input type="submit" value="Visualizar o conteúdo" class="botao">
         </form>
     </div>
-
+    
     <div id="ex3" class="modal" style="text-align: center; max-width: 300px;">
         <form id="formEx3" action="/leads" method="POST">
             <h5>Nome Completo</h5>
@@ -283,7 +263,7 @@
             <input type="submit" value="Visualizar o conteúdo" class="botao">
         </form>
     </div>
-
+    
     <script>
         $("#formEx1").on("submit", function(e) {
             e.preventDefault(); // cancel submission
@@ -309,29 +289,29 @@
             });
         });
     </script>
-
+    
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
-
+    
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
-
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyA6Ei_iQsY8k9A20bBukWzbNR5SxDtM4B0",
-            authDomain: "gunners-imore.firebaseapp.com",
-            databaseURL: "https://gunners-imore.firebaseio.com",
-            projectId: "gunners-imore",
-            storageBucket: "gunners-imore.appspot.com",
-            messagingSenderId: "244180259618",
-            appId: "1:244180259618:web:fcf92677f0b4260ad58b7b",
-            measurementId: "G-8DYBG5C6J7"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-    </script>
-</body>
-</html>
+        <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
+        
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyA6Ei_iQsY8k9A20bBukWzbNR5SxDtM4B0",
+                authDomain: "gunners-imore.firebaseapp.com",
+                databaseURL: "https://gunners-imore.firebaseio.com",
+                projectId: "gunners-imore",
+                storageBucket: "gunners-imore.appspot.com",
+                messagingSenderId: "244180259618",
+                appId: "1:244180259618:web:fcf92677f0b4260ad58b7b",
+                measurementId: "G-8DYBG5C6J7"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+        </script>
+    </body>
+    </html>
