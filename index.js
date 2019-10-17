@@ -12,12 +12,12 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/blog', (req, res) => {
-    res.sendFile(__dirname + '/blog.html');
+app.get('/tecnologia-e-marketing-digital', (req, res) => {
+    res.sendFile(__dirname + '/tecnologia-e-marketing-digital.html');
 });
 
-app.get('/blog-2', (req, res) => {
-    res.sendFile(__dirname + '/blog-2.html');
+app.get('/momentos-da-verdade-para-sua-empresa', (req, res) => {
+    res.sendFile(__dirname + '/momentos-da-verdade-para-sua-empresa.html');
 });
 
 app.get('/estrutura-proposta-comercial', (req, res) => {
@@ -43,12 +43,12 @@ app.get('/Newsletter.html', (req, res) => {
     res.sendFile(__dirname + '/Newsletter.html');
 });
  
-app.get('/blog.html', (req, res) => {
-    res.sendFile(__dirname + '/blog.html');
+app.get('/tecnologia-e-marketing-digital.html', (req, res) => {
+    res.sendFile(__dirname + '/tecnologia-e-marketing-digital.html');
 });
 
-app.get('/blog-2.html', (req, res) => {
-    res.sendFile(__dirname + '/blog-2.html');
+app.get('/momentos-da-verdade-para-sua-empresa.html', (req, res) => {
+    res.sendFile(__dirname + '/momentos-da-verdade-para-sua-empresa.html');
 });
 
 app.get('/estrutura-proposta-comercial.html', (req, res) => {
