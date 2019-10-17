@@ -19,6 +19,10 @@ app.get('/blog', (req, res) => {
 app.get('/blog-2', (req, res) => {
     res.sendFile(__dirname + '/blog-2.html');
 });
+
+app.get('/estrutura-proposta-comercial', (req, res) => {
+    res.sendFile(__dirname + '/estrutura-proposta-comercial.html');
+});
  
 app.get('/Newsletter', (req, res) => {
     res.sendFile(__dirname + '/Newsletter.html');
@@ -45,6 +49,10 @@ app.get('/blog.html', (req, res) => {
 
 app.get('/blog-2.html', (req, res) => {
     res.sendFile(__dirname + '/blog-2.html');
+});
+
+app.get('/estrutura-proposta-comercial.html', (req, res) => {
+    res.sendFile(__dirname + '/estrutura-proposta-comercial.html');
 });
  
 app.get('/index.html', (req, res) => {
