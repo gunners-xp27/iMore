@@ -285,7 +285,7 @@
     
     <script>
         $.getJSON('https://api.ipify.org/?format=json', function(data){
-            $("input[name*='ip']" ).val(data.ip);
+            $("input[name='ip']" ).val(data.ip);
         });
 
         let current_datetime = new Date();
@@ -296,7 +296,7 @@
             + ":" + current_datetime.getMinutes() 
             + ":" + current_datetime.getSeconds();
 
-        $("input[name*='data_hora']" ).val(formatted_date);
+        $("input[name='data_hora']" ).val(formatted_date);
 
         $("#formEx1").on("submit", function(e) {
             e.preventDefault(); // cancel submission
