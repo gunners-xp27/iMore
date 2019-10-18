@@ -47,6 +47,7 @@
             background: aqua;
             color: white;
             font-weight: bold;
+            cursor: pointer;
        }
        .unico{
            width: 80%;
@@ -131,16 +132,16 @@
         <div class="lado">
                 <div>
                     <img class="unico" src="/img/7.jpg" alt="Homem elaborando proposta">
-                    <a href="estrutura-proposta-comercial.html"><h5>Estrutura proposta comercial</h5></a> 
+                    <a href="#ex3" rel="modal:open"><h5>Estrutura proposta comercial</h5></a> 
                 </div>
                 <div>
                     <img class="unico" src="/img/2.jpg" alt="Empresa">
-                    <a href="momentos-da-verdade-para-sua-empresa.html"><h5>Momento da verdade seu negocio</h5></a>
+                    <a href="#ex2" rel="modal:open"><h5>Momento da verdade seu negocio</h5></a>
                 </div>
         </div>    
         <div class="deitado">
                 <img class="deitado_imagem" src="/img/imagem.png" alt="Tecnicas de Marketing">
-                <a href="tecnologia-e-marketing-digital.html"><h5>Tecnologia e Marketing Digital</h5></a>        </div>     
+                <a href="#ex1" rel="modal:open"><h5>Tecnologia e Marketing Digital</h5></a>        </div>     
     </section>
     <div class="conteudo">
                 <h4>Saiba Captar Leads <br> Qualificados</h4>
@@ -223,6 +224,12 @@
             <h5>Como possso te ajudar?</h5>
             <input type="text" name="ajuda" placeholder="Opcional">
             <br>
+            <div style="text-align: left; margin-top: 10px;">
+            <input type="radio" name="tipo" value="B2B" style="width: auto;" checked> B2B<br>
+            <input type="radio" name="tipo" value="B2C" style="width: auto;"> B2C<br>
+            </div>
+            <input type="hidden" name="ip">
+            <input type="hidden" name="data_hora">
             <br>
             <input type="submit" value="Visualizar o conteúdo" class="botao">
         </form>
@@ -241,6 +248,12 @@
             <h5>Como possso te ajudar?</h5>
             <input type="text" name="ajuda" placeholder="Opcional">
             <br>
+            <div style="text-align: left; margin-top: 10px;">
+            <input type="radio" name="tipo" value="B2B" style="width: auto;" checked> B2B<br>
+            <input type="radio" name="tipo" value="B2C" style="width: auto;"> B2C<br>
+            </div>
+            <input type="hidden" name="ip">
+            <input type="hidden" name="data_hora">
             <br>
             <input type="submit" value="Visualizar o conteúdo" class="botao">
         </form>
@@ -259,12 +272,32 @@
             <h5>Como possso te ajudar?</h5>
             <input type="text" name="ajuda" placeholder="Opcional">
             <br>
+            <div style="text-align: left; margin-top: 10px;">
+            <input type="radio" name="tipo" value="B2B" style="width: auto;" checked> B2B<br>
+            <input type="radio" name="tipo" value="B2C" style="width: auto;"> B2C<br>
+            </div>
+            <input type="hidden" name="ip">
+            <input type="hidden" name="data_hora">
             <br>
             <input type="submit" value="Visualizar o conteúdo" class="botao">
         </form>
     </div>
     
     <script>
+        $.getJSON('https://api.ipify.org/?format=json', function(data){
+            $("input[name*='ip']" ).val(data.ip);
+        });
+
+        let current_datetime = new Date();
+        let formatted_date = current_datetime.getFullYear()
+            + "-" + (current_datetime.getMonth() + 1) 
+            + "-" + current_datetime.getDate() 
+            + " " + current_datetime.getHours() 
+            + ":" + current_datetime.getMinutes() 
+            + ":" + current_datetime.getSeconds();
+
+        $("input[name*='data_hora']" ).val(formatted_date);
+
         $("#formEx1").on("submit", function(e) {
             e.preventDefault(); // cancel submission
             $.post("/leads", $("#formEx1").serialize(), function(data) {

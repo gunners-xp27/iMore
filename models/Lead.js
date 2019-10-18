@@ -1,23 +1,23 @@
 const firebase = require('../firebase');
 const stringify = require('csv-stringify');
 
-const create = ({ name, empresa, cargo, email, ajuda }) => {
+const create = ({ name, empresa, cargo, email, ajuda, ip, tipo, data_hora }) => {
     const leads = firebase.database().ref('leads');
-    const lead = leads.push({ name, empresa, cargo, email, ajuda });
+    const lead = leads.push({ name, empresa, cargo, email, ajuda, ip, tipo, data_hora });
     return lead;
 };
 
 const csv = (cb) => {
     const leads = firebase.database().ref('leads');
-    const data = [['id', 'name', 'empresa', 'cargo', 'email', 'ajuda']];
+    const data = [['email', 'nome', 'ip', 'tipo', 'data_hora']];
     leads.on('value', (snapshot) => {
         snapshot.forEach((lead) => {
-            const { name } = lead.val();
-            const { empresa } = lead.val();
-            const { cargo } = lead.val();
             const { email } = lead.val();
-            const { ajuda } = lead.val();
-            data.push([lead.key, name, empresa, cargo, email, ajuda]);
+            const { name } = lead.val();
+            const { ip } = lead.val();
+            const { tipo } = lead.val();
+            const { data_hora } = lead.val();
+            data.push([email, name, ip, tipo, data_hora]);
         });
         stringify(data, (err, output) => {
             cb(output);

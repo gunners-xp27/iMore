@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>iMore-Newsletter</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <style>
         body{
             overflow-x:hidden;
@@ -31,7 +32,8 @@
             font-size: 15px;
         }
         input, h5{
-            margin: 2%;
+            margin-bottom: 10px;
+            margin-top: 0;
         }
         input{
             border: solid aqua 2px;
@@ -133,9 +135,6 @@
        .meio input{
            width: 80%;
        }
-        input, h5{
-            margin: 2%;
-        }
         input{
             border: solid #052026 2px;
             border-radius: 4px;
@@ -148,6 +147,8 @@
             font-weight: bold;
             cursor: pointer;
             padding: 5px 15px;
+            margin-top: 20px;
+            margin-left: 5px;
         }
         #botao:hover{
             background-color: #00adff;
@@ -176,7 +177,7 @@
             <h4> Fique por dentro de <br>todos os nossos <br>novos conteudos</h4>
         </div>
         <div id="direita">
-            <form action="/leads" method="POST">
+            <form id="formNewsletter" action="/leads" method="POST">
                 <h5>Nome Completo</h5>
                 <input type="text" name="name" id="name" placeholder="Nome Completo" required>
                 <h5>Empresa</h5>
@@ -187,6 +188,11 @@
                 <input type="email" name="email" id="email" placeholder="Email" required>
                 <h5>Como possso te ajudar?</h5>
                 <input type="text" name="ajuda" id="ajuda" placeholder="Opcional">
+                <br>
+                <input type="radio" name="tipo" value="B2B" style="width: auto;" checked> B2B<br>
+                <input type="radio" name="tipo" value="B2C" style="width: auto;"> B2C<br>
+                <input type="hidden" name="ip" id="ip">
+                <input type="hidden" name="data_hora" id="data_hora">
                 <input type="submit" value="Assinar" id="botao">
             </form>
         </div>        
@@ -207,6 +213,22 @@
             </div>
         </div>    
     </footer>
+
+    <script>
+        $.getJSON('https://api.ipify.org/?format=json', function(data){
+            $('#ip').val(data.ip);
+        });
+
+        let current_datetime = new Date();
+        let formatted_date = current_datetime.getFullYear()
+            + "-" + (current_datetime.getMonth() + 1) 
+            + "-" + current_datetime.getDate() 
+            + " " + current_datetime.getHours() 
+            + ":" + current_datetime.getMinutes() 
+            + ":" + current_datetime.getSeconds();
+
+        $('#data_hora').val(formatted_date);
+    </script>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>

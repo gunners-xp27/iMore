@@ -81,7 +81,10 @@ app.post('/leads', (req, res) => {
     const { cargo } = req.body;
     const { email } = req.body;
     const { ajuda } = req.body;
-    const lead = Lead.create({ name, empresa, cargo, email, ajuda });
+    const { ip } = req.body;
+    const { tipo } = req.body;
+    const { data_hora } = req.body;
+    const lead = Lead.create({ name, empresa, cargo, email, ajuda, ip, tipo, data_hora });
     res.send('Obrigado, ' + name + "!");
 });
 
