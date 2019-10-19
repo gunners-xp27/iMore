@@ -31,6 +31,10 @@ app.get('/momentos-da-verdade-para-sua-empresa', (req, res) => {
 app.get('/estrutura-proposta-comercial', (req, res) => {
     res.sendFile(__dirname + '/estrutura-proposta-comercial.html');
 });
+
+app.get('/o-que-fazer-depois-de-enviar-proposta-comercial', (req, res) => {
+    res.sendFile(__dirname + '/o-que-fazer-depois-de-enviar-proposta-comercial.html');
+});
  
 app.get('/Newsletter', (req, res) => {
     res.sendFile(__dirname + '/Newsletter.html');
@@ -69,6 +73,10 @@ app.get('/blog-2.html', (req, res) => {
 
 app.get('/estrutura-proposta-comercial.html', (req, res) => {
     res.sendFile(__dirname + '/estrutura-proposta-comercial.html');
+});
+
+app.get('/o-que-fazer-depois-de-enviar-proposta-comercial.html', (req, res) => {
+    res.sendFile(__dirname + '/o-que-fazer-depois-de-enviar-proposta-comercial.html');
 });
  
 app.get('/index.html', (req, res) => {
