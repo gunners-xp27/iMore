@@ -104,4 +104,12 @@ app.get('/leads.csv', (req, res) => {
     });
 });
 
+app.get('/leads-ip.csv', (req, res) => {
+    res.setHeader('Content-Type', 'text/csv');
+    res.setHeader('Content-Disposition', 'attachment; filename="leads-ip.csv"');
+    Lead.csvIP((data) => {
+        res.send(data);
+    });
+});
+
 app.listen(21104);
